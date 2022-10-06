@@ -1,13 +1,49 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import styles from '~/styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
     <>
-      <h1 className={styles.title}>
-        fix Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+      <div className={styles.panel}>
+        <div className={styles.panelHeader}>
+          <div className={styles.heading}>ToDo</div>
+        </div>
+        <div className="panelBody">
+          <div className={styles.inputField}>
+            <input className={styles.input} placeholder="タスクを入力してください" type="text" name="task" />
+          </div>
+          <div className="todo">
+            <div className={styles.todoStatus}>
+              <button className={styles.statusButton}>All</button>
+              <button className={styles.statusButton}>ToDo</button>
+              <button className={styles.statusButton}>Done</button>
+            </div>
+            <ul className={styles.todoList}>
+              <li className={styles.todoListItem}>
+                <label className={styles.checkbox}>
+                  <input type="checkbox" name="todo" id="todo_1" value="1" className={styles.todoCheckbox} />
+                  会議
+                </label>
+              </li>
+              <li className={styles.todoListItem}>
+                <label className={styles.checkbox}>
+                  <input type="checkbox" name="todo" id="todo_2" value="2" className={styles.todoCheckbox} />
+                  メール
+                </label>
+              </li>
+              <li className={styles.todoListItem}>
+                <label className={styles.checkbox}>
+                  <input type="checkbox" name="todo" id="todo_3" value="3" className={styles.todoCheckbox} />
+                  読書
+                </label>
+              </li>
+            </ul>
+            <div className={styles.todoFooter}>
+              <div>3 todos</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
