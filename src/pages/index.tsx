@@ -10,7 +10,9 @@ const Home: NextPage = () => {
         </div>
         <div className="panelBody">
           <div className={styles.inputField}>
-            <input className={styles.input} placeholder="タスクを入力してください" type="text" name="task" />
+            <form noValidate>
+              <input className={styles.input} placeholder="タスクを入力してください" type="text" name="task" />
+            </form>
           </div>
           <div className="todo">
             <div className={styles.todoStatus}>
