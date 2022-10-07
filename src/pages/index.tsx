@@ -16,9 +16,9 @@ const Home: NextPage = () => {
           </div>
           <div className="todo">
             <div className={styles.todoStatus}>
-              <button className={styles.statusButton}>All</button>
-              <button className={styles.statusButton}>ToDo</button>
-              <button className={styles.statusButton}>Done</button>
+              <button className={styles.statusButton}>すべて</button>
+              <button className={styles.statusButton}>未完了</button>
+              <button className={styles.statusButton}>完了</button>
             </div>
             <ul className={styles.todoList}>
               <li className={styles.todoListItem}>
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
             <div className={styles.todoFooter}>
-              <div>3 todos</div>
+              <div className={styles.todoDetail}>3 todos</div>
             </div>
           </div>
         </div>
